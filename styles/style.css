@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.mainContaier{
+    background-color: #f5eda9;
+}
+
+.leftMenuPanel{
+    width: 300px;
+    height: 80vh;
+    margin-left: -270px; 
+    margin-top: 2%;
+}
+
+.menuLogo{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+
+}
+
+.cities{
+    margin-left: 15px;
+}
+
+.cities>li{
+    margin-top: 5%;
+    font-size: 24pt;
+    color: white;
+}
