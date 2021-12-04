@@ -1,13 +1,14 @@
 const lftPanel = document.getElementById("lPanel");
 
-let x = -270;
+let offset = -270;
 let idInterval;
 let idStopInerval;
-function ShowSideBar(){
-    x += 5;
-    lftPanel.style.marginLeft = `${x}px`;
 
-    if(x >= -15){
+function ShowSideBar(){
+    offset += 5;
+    lftPanel.style.marginLeft = `${offset}px`;
+
+    if(offset >= -15){
         clearInterval(idInterval);
         return;
     }
@@ -15,10 +16,10 @@ function ShowSideBar(){
 
 
 function HideSideBar(){
-    x-=5;
-    lftPanel.style.marginLeft = `${x}px`;
+    offset-=5;
+    lftPanel.style.marginLeft = `${offset}px`;
     
-    if(x <= -270){
+    if(offset <= -270){
         clearInterval(idStopInerval);
     }
 }
@@ -26,8 +27,8 @@ function HideSideBar(){
 
 
 function sideBarManager(e){   
-    if(e.target.tagName == "LI"){
-        console.log(true);
+    if(e.target.tagName == "BUTTON"){
+        console.log(e.target);
     }
     else{
         let st = getComputedStyle(lftPanel).marginLeft;

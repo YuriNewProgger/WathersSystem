@@ -1,20 +1,19 @@
-
-// let cities = Array.from(document.querySelectorAll(".cities>li"));
-
-// let arrCities = [];
-// for(let i = 0; i < cities.length; i++){
-//     arrCities[i] = cities[i].innerHTML;
-// }
-
-// console.log(arrCities);
+function btnFactory(color, border){
+    let b = document.createElement("button");
+    b.style.backgroundColor = color;
+    b.style.border = border;  
+    return b;
+}
 
 let arrCities = ["Moscow", "Paris", "London", "New-York", "Pekin"];
 
 let ulCities = document.querySelector("ul");
 
 for(let i = 0; i < arrCities.length; i++){
+    let btn = btnFactory("Transparent", "none");
     let elem = document.createElement("li");
     let elemText = document.createTextNode(arrCities[i]);
-    elem.appendChild(elemText);
+    btn.appendChild(elemText);
+    elem.appendChild(btn);
     ulCities.appendChild(elem);
 }
