@@ -28,7 +28,7 @@ function HideSideBar(){
 
 function sideBarManager(e){   
     if(e.target.tagName == "BUTTON"){
-        console.log(e.target);
+        console.log(e.path[0].innerHTML); 
     }
     else{
         let st = getComputedStyle(lftPanel).marginLeft;
